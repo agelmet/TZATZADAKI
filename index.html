@@ -42,6 +42,7 @@
                         'float': 'float 12s ease-in-out infinite',
                         'float-delayed': 'float 12s ease-in-out 6s infinite',
                         'fade-in-up': 'fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                        'pulse-slow': 'pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite',
                     },
                     keyframes: {
                         float: {
@@ -127,36 +128,34 @@
         </div>
     </nav>
 
-    <section class="relative min-h-screen flex items-center pt-24 px-6">
-        <div class="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-16 items-center">
-            
-            <div class="order-2 lg:order-1 reveal">
-                <div class="flex items-center gap-3 mb-6">
-                    <div class="w-12 h-[1px] bg-lux-champagne"></div>
-                    <span class="text-lux-champagne text-xs font-semibold tracking-[0.2em] uppercase">Ψυχαναλυτικη Ψυχοθεραπεια</span>
-                </div>
-                <h2 class="text-5xl lg:text-7xl font-serif text-lux-text leading-tight mb-8 text-balance font-light">
-                    Μια βαθιά <span class="italic text-lux-champagne">συνάντηση</span> με τον εαυτό.
-                </h2>
-                <p class="text-lg text-lux-muted mb-12 max-w-lg font-light leading-relaxed">
-                    Ένας ασφαλής χώρος διερεύνησης και νοηματοδότησης της εμπειρίας, όπου το άτομο έρχεται σε επαφή με τις βαθύτερες πτυχές του.
-                </p>
-                <div class="flex flex-wrap items-center gap-6">
-                    <a href="#services" class="px-8 py-4 bg-lux-champagne text-white rounded-full text-sm font-semibold tracking-wider hover:bg-lux-text transition-all duration-300 flex items-center gap-2 group shadow-lg shadow-lux-champagne/20">
-                        ΟΙ ΥΠΗΡΕΣΙΕΣ
-                        <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
-                    </a>
-                </div>
-            </div>
+    <section class="relative min-h-screen flex flex-col justify-center items-center text-center pt-24 px-6 overflow-hidden">
+        
+        <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+            <div class="absolute top-[10%] left-[15%] w-[40vw] h-[40vw] rounded-full bg-gradient-to-tr from-lux-champagne/30 to-amber-100/30 blur-[100px] animate-pulse-slow"></div>
+            <div class="absolute bottom-[10%] right-[15%] w-[45vw] h-[45vw] rounded-full bg-gradient-to-bl from-blue-50/50 to-lux-taupe/20 blur-[120px] animate-float"></div>
+        </div>
 
-            <div class="order-1 lg:order-2 relative reveal delay-200">
-                <div class="relative w-full max-w-[500px] aspect-[4/5] mx-auto">
-                    <div class="absolute inset-0 border border-lux-champagne/30 rounded-t-full rounded-b-[4rem] transform translate-x-4 translate-y-4"></div>
-                    
-                    <div class="absolute inset-0 overflow-hidden rounded-t-full rounded-b-[4rem] bg-white relative z-10 p-2 shadow-xl shadow-black/5">
-                        <img src="https://github.com/agelmet/TZATZADAKI/blob/main/tzatza.png?raw=true" alt="Ματρώνη Τζατζαδάκη" class="w-full h-full object-cover rounded-t-full rounded-b-[3.5rem] transition-transform duration-1000 hover:scale-105">
-                    </div>
-                </div>
+        <div class="relative z-10 w-full max-w-4xl mx-auto flex flex-col items-center reveal">
+            
+            <div class="flex items-center justify-center gap-4 mb-8 w-full">
+                <div class="w-12 md:w-20 h-[1px] bg-gradient-to-r from-transparent to-lux-champagne"></div>
+                <span class="text-lux-champagne text-xs md:text-sm font-semibold tracking-[0.3em] uppercase whitespace-nowrap">Ψυχαναλυτικη Ψυχοθεραπεια</span>
+                <div class="w-12 md:w-20 h-[1px] bg-gradient-to-l from-transparent to-lux-champagne"></div>
+            </div>
+            
+            <h2 class="text-6xl md:text-8xl font-serif text-lux-text leading-[1.1] mb-8 font-light drop-shadow-sm text-balance">
+                Μια βαθιά <span class="italic text-transparent bg-clip-text bg-gradient-to-r from-lux-champagne to-lux-taupe font-medium">συνάντηση</span><br>με τον εαυτό.
+            </h2>
+            
+            <p class="text-lg md:text-2xl text-lux-muted mb-12 max-w-2xl mx-auto font-light leading-relaxed">
+                Ένας ασφαλής χώρος διερεύνησης και νοηματοδότησης της εμπειρίας, όπου το άτομο έρχεται σε επαφή με τις βαθύτερες πτυχές του.
+            </p>
+            
+            <div class="flex flex-wrap justify-center items-center gap-6">
+                <a href="#services" class="px-10 py-5 bg-gradient-to-r from-lux-champagne to-[#91755f] text-white rounded-full text-sm font-semibold tracking-widest hover:scale-105 transition-all duration-500 shadow-[0_15px_40px_-10px_rgba(166,138,115,0.7)] flex items-center gap-3 group">
+                    ΞΕΚΙΝΗΣΤΕ ΤΟ ΤΑΞΙΔΙ
+                    <i data-lucide="chevron-down" class="w-5 h-5 group-hover:translate-y-1 transition-transform"></i>
+                </a>
             </div>
             
         </div>
@@ -170,46 +169,60 @@
     <div class="w-full h-px bg-gradient-to-r from-transparent via-lux-champagne/20 to-transparent"></div>
 
     <section id="about" class="py-32 px-6 relative bg-lux-surface">
-        <div class="max-w-5xl mx-auto">
+        <div class="max-w-6xl mx-auto">
             <div class="text-center mb-20 reveal">
                 <h3 class="text-3xl md:text-5xl font-serif text-lux-text mb-4">Ματρώνη Τζατζαδάκη</h3>
                 <p class="text-lux-taupe tracking-widest text-sm uppercase font-medium">Ψυχολογος – Ψυχοδυναμικη / Ψυχαναλυτικη Ψυχοθεραπευτρια</p>
                 <div class="w-16 h-[1px] bg-lux-champagne mx-auto mt-8"></div>
             </div>
 
-            <div class="space-y-8 text-lux-muted font-light leading-relaxed text-lg reveal delay-100 drop-cap">
-                <p>
-                    Η Ματρώνη Τζατζαδάκη είναι Ψυχολόγος, απόφοιτη του Εθνικού και Καποδιστριακού Πανεπιστημίου Αθηνών (ΕΚΠΑ), και εκπαιδευόμενη θεραπεύτρια στην Ψυχοδυναμική / Ψυχαναλυτική Ψυχοθεραπεία. Παράλληλα, είναι πτυχιούχος Ελληνικής Φιλολογίας του ΕΚΠΑ με κατεύθυνση στη Γλωσσολογία, έχοντας εστιάσει το επιστημονικό της ενδιαφέρον στη Νευρογλωσσολογία και την Ψυχογλωσσολογία. 
-                </p>
-                <p>
-                    Στο πλαίσιο της ακαδημαϊκής της πορείας, πραγματοποίησε εξάμηνη φοίτηση στο Université de Genève (Faculté des Lettres, Département de Linguistique), εμβαθύνοντας στη Γαλλική Φωνητική και τη Γλωσσολογία. Η διεπιστημονική της εκπαίδευση ενισχύει μια ολιστική κατανόηση της ψυχικής λειτουργίας, συνδέοντας τη γλώσσα, τη σκέψη και το συναίσθημα.
-                </p>
-                <p>
-                    Διατηρεί ενεργή παρουσία στην επιστημονική κοινότητα, συμμετέχοντας σε συνέδρια και επιστημονικές εκδηλώσεις, ενώ έχει παρουσιάσει ερευνητικές εργασίες σε πανελλήνια συνέδρια ψυχολογικής έρευνας, με θεματικές που περιλαμβάνουν το πένθος, την ψυχική επεξεργασία υπό συνθήκες κρίσης, καθώς και τη βιωματική εμπειρία των θεραπευτών στη μετάβαση στον ρόλο του θεραπευόμενου. Παράλληλα, ασχολείται με τη συγγραφή και επιμέλεια άρθρων ψυχολογικού περιεχομένου, αξιοποιώντας τη φιλολογική της κατάρτιση.
-                </p>
-                <div class="grid md:grid-cols-2 gap-8 my-12">
-                    <div class="glass-card p-8 rounded-2xl bg-lux-bg">
-                        <i data-lucide="briefcase" class="w-8 h-8 text-lux-champagne mb-4"></i>
-                        <p class="text-base text-lux-text">Επαγγελματικά, εργάζεται ως Ψυχολόγος και Ψυχοθεραπεύτρια, παρέχοντας ατομικές συνεδρίες σε ενήλικες, τόσο ιδιωτικά όσο και σε συνεργασία με δομές ψυχικής υγείας. Έχει εμπειρία από τη δουλειά της σε πλαίσια ειδικής αγωγής και από τη συμμετοχή της σε θεραπευτικές ομάδες σε ιδρύματα και σχολικά περιβάλλοντα.</p>
-                    </div>
-                    <div class="glass-card p-8 rounded-2xl bg-lux-bg">
-                        <i data-lucide="heart-handshake" class="w-8 h-8 text-lux-champagne mb-4"></i>
-                        <p class="text-base text-lux-text">Έχει συνεργαστεί με τον οργανισμό Pet Partners of Hellas, συμβάλλοντας σε παρεμβάσεις που αξιοποιούν τη θεραπευτική σχέση ανθρώπου–ζώου. Είναι επιστημονική συνεργάτις της Aerton, συμμετέχοντας ενεργά σε δράσεις που στοχεύουν στην προαγωγή της ψυχικής υγείας.</p>
+            <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+                
+                <div class="lg:col-span-5 relative reveal delay-100">
+                    <div class="relative w-full max-w-[380px] mx-auto aspect-[4/5] md:sticky md:top-32">
+                        <div class="absolute inset-0 border border-lux-champagne/30 rounded-t-[10rem] rounded-b-[2rem] transform -translate-x-3 translate-y-3"></div>
+                        
+                        <div class="absolute inset-0 overflow-hidden rounded-t-[10rem] rounded-b-[2rem] bg-white relative z-10 p-1 shadow-xl shadow-lux-champagne/10">
+                            <img src="https://github.com/agelmet/TZATZADAKI/blob/main/tzatza.png?raw=true" alt="Ματρώνη Τζατζαδάκη" class="w-full h-full object-cover rounded-t-[9.5rem] rounded-b-[1.8rem] transition-transform duration-1000 hover:scale-105">
+                        </div>
                     </div>
                 </div>
-                <p>
-                    Στην κλινική της πρακτική, ακολουθεί την ψυχοδυναμική/ψυχαναλυτική προσέγγιση, δίνοντας έμφαση στην κατανόηση των ασυνείδητων διεργασιών, των πρώιμων σχέσεων και της προσωπικής ιστορίας του ατόμου. Η θεραπευτική διαδικασία αντιμετωπίζεται ως ένας χώρος διερεύνησης και νοηματοδότησης της εμπειρίας, όπου το άτομο μπορεί να έρθει σε επαφή με βαθύτερες πτυχές του εαυτού του.
-                </p>
-                <p>
-                    Ασχολείται με ζητήματα όπως οι αγχώδεις διαταραχές, η κατάθλιψη, το πένθος, οι κρίσεις πανικού, οι φοβίες, τα θέματα αυτοεκτίμησης, οι διαταραχές διάθεσης και οι δυσκολίες στις διαπροσωπικές σχέσεις.
-                </p>
-                <div class="border-l-2 border-lux-champagne pl-6 py-2 mt-8 text-lux-text italic font-serif text-2xl">
-                    "Η θεραπευτική της στάση βασίζεται στη δημιουργία ενός ασφαλούς και εμπιστευτικού πλαισίου, με σεβασμό στη μοναδικότητα κάθε ανθρώπου και στόχο τη βαθύτερη κατανόηση, την ψυχική επεξεργασία και την ουσιαστική αλλαγή."
+
+                <div class="lg:col-span-7 space-y-8 text-lux-muted font-light leading-relaxed text-lg reveal delay-200 drop-cap">
+                    <p>
+                        Η Ματρώνη Τζατζαδάκη είναι Ψυχολόγος, απόφοιτη του Εθνικού και Καποδιστριακού Πανεπιστημίου Αθηνών (ΕΚΠΑ), και εκπαιδευόμενη θεραπεύτρια στην Ψυχοδυναμική / Ψυχαναλυτική Ψυχοθεραπεία. Παράλληλα, είναι πτυχιούχος Ελληνικής Φιλολογίας του ΕΚΠΑ με κατεύθυνση στη Γλωσσολογία, έχοντας εστιάσει το επιστημονικό της ενδιαφέρον στη Νευρογλωσσολογία και την Ψυχογλωσσολογία. 
+                    </p>
+                    <p>
+                        Στο πλαίσιο της ακαδημαϊκής της πορείας, πραγματοποίησε εξάμηνη φοίτηση στο Université de Genève (Faculté des Lettres, Département de Linguistique), εμβαθύνοντας στη Γαλλική Φωνητική και τη Γλωσσολογία. Η διεπιστημονική της εκπαίδευση ενισχύει μια ολιστική κατανόηση της ψυχικής λειτουργίας, συνδέοντας τη γλώσσα, τη σκέψη και το συναίσθημα.
+                    </p>
+                    <p>
+                        Διατηρεί ενεργή παρουσία στην επιστημονική κοινότητα, συμμετέχοντας σε συνέδρια και επιστημονικές εκδηλώσεις, ενώ έχει παρουσιάσει ερευνητικές εργασίες σε πανελλήνια συνέδρια ψυχολογικής έρευνας, με θεματικές που περιλαμβάνουν το πένθος, την ψυχική επεξεργασία υπό συνθήκες κρίσης, καθώς και τη βιωματική εμπειρία των θεραπευτών στη μετάβαση στον ρόλο του θεραπευόμενου. Παράλληλα, ασχολείται με τη συγγραφή και επιμέλεια άρθρων ψυχολογικού περιεχομένου, αξιοποιώντας τη φιλολογική της κατάρτιση.
+                    </p>
+                    <div class="grid sm:grid-cols-2 gap-6 my-10">
+                        <div class="glass-card p-6 rounded-2xl bg-lux-bg">
+                            <i data-lucide="briefcase" class="w-6 h-6 text-lux-champagne mb-4"></i>
+                            <p class="text-sm text-lux-text">Επαγγελματικά, εργάζεται ως Ψυχολόγος και Ψυχοθεραπεύτρια, παρέχοντας ατομικές συνεδρίες σε ενήλικες, τόσο ιδιωτικά όσο και σε συνεργασία με δομές ψυχικής υγείας. Έχει εμπειρία από τη δουλειά της σε πλαίσια ειδικής αγωγής και από τη συμμετοχή της σε θεραπευτικές ομάδες σε ιδρύματα και σχολικά περιβάλλοντα.</p>
+                        </div>
+                        <div class="glass-card p-6 rounded-2xl bg-lux-bg">
+                            <i data-lucide="heart-handshake" class="w-6 h-6 text-lux-champagne mb-4"></i>
+                            <p class="text-sm text-lux-text">Έχει συνεργαστεί με τον οργανισμό Pet Partners of Hellas, συμβάλλοντας σε παρεμβάσεις που αξιοποιούν τη θεραπευτική σχέση ανθρώπου–ζώου. Είναι επιστημονική συνεργάτις της Aerton, συμμετέχοντας ενεργά σε δράσεις που στοχεύουν στην προαγωγή της ψυχικής υγείας.</p>
+                        </div>
+                    </div>
+                    <p>
+                        Στην κλινική της πρακτική, ακολουθεί την ψυχοδυναμική/ψυχαναλυτική προσέγγιση, δίνοντας έμφαση στην κατανόηση των ασυνείδητων διεργασιών, των πρώιμων σχέσεων και της προσωπικής ιστορίας του ατόμου. Η θεραπευτική διαδικασία αντιμετωπίζεται ως ένας χώρος διερεύνησης και νοηματοδότησης της εμπειρίας, όπου το άτομο μπορεί να έρθει σε επαφή με βαθύτερες πτυχές του εαυτού του.
+                    </p>
+                    <p>
+                        Ασχολείται με ζητήματα όπως οι αγχώδεις διαταραχές, η κατάθλιψη, το πένθος, οι κρίσεις πανικού, οι φοβίες, τα θέματα αυτοεκτίμησης, οι διαταραχές διάθεσης και οι δυσκολίες στις διαπροσωπικές σχέσεις.
+                    </p>
+                    <div class="border-l-2 border-lux-champagne pl-6 py-2 mt-8 text-lux-text italic font-serif text-2xl">
+                        "Η θεραπευτική της στάση βασίζεται στη δημιουργία ενός ασφαλούς και εμπιστευτικού πλαισίου, με σεβασμό στη μοναδικότητα κάθε ανθρώπου και στόχο τη βαθύτερη κατανόηση, την ψυχική επεξεργασία και την ουσιαστική αλλαγή."
+                    </div>
+                    <p class="mt-8">
+                        Διατηρεί ιδιωτικό γραφείο στον Βύρωνα, καθώς και στο κέντρο της Αθήνας, όπου πραγματοποιεί συνεδρίες δια ζώσης, ενώ υπάρχει και η δυνατότητα online συνεδριών.
+                    </p>
                 </div>
-                <p class="mt-8">
-                    Διατηρεί ιδιωτικό γραφείο στον Βύρωνα, καθώς και στο κέντρο της Αθήνας, όπου πραγματοποιεί συνεδρίες δια ζώσης, ενώ υπάρχει και η δυνατότητα online συνεδριών.
-                </p>
             </div>
+
         </div>
     </section>
 
@@ -223,6 +236,12 @@
                 
                 <div class="lg:col-span-5 reveal">
                     <h2 class="text-4xl md:text-5xl font-serif text-lux-text mb-8 leading-tight">Γιατί να επιλέξω Ψυχαναλυτική / Ψυχοδυναμική Ψυχοθεραπεία;</h2>
+                    
+                    <div class="w-full h-64 rounded-3xl overflow-hidden mb-8 shadow-md border border-lux-champagne/10 relative group">
+                        <div class="absolute inset-0 bg-lux-champagne/10 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1000&auto=format&fit=crop" alt="Calm Abstract Nature" class="w-full h-full object-cover transform scale-105 group-hover:scale-110 transition-transform duration-[2s]">
+                    </div>
+
                     <div class="w-20 h-[1px] bg-lux-champagne mb-8"></div>
                     <p class="text-xl font-serif italic text-lux-champagne mb-6">"Υπάρχουν στιγμές που κάτι μέσα μας «μιλά», χωρίς να βρίσκει εύκολα λέξεις."</p>
                     <p class="text-lux-muted font-light">Ένα βάρος, μια ανησυχία, μια επανάληψη που κουράζει. Σαν να επιστρέφουμε ξανά και ξανά στα ίδια σημεία, χωρίς να καταλαβαίνουμε γιατί.</p>
@@ -339,7 +358,25 @@
                         <div>
                             <span class="block text-lux-taupe text-xs tracking-widest uppercase mb-2 font-medium">Κοινωνικα Δικτυα</span>
                             <a href="https://instagram.com/matronitzatzadaki_psych" target="_blank" class="text-base text-lux-text hover:text-lux-champagne transition-colors flex items-center gap-2">
-                                <i data-lucide="instagram" class="w-4 h-4 text-lux-champagne shrink-0"></i>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 shrink-0 hover:scale-110 transition-transform">
+                                    <rect width="24" height="24" rx="5" fill="url(#ig_radial)"/>
+                                    <rect width="24" height="24" rx="5" fill="url(#ig_linear)"/>
+                                    <path d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" stroke="white" stroke-width="1.8"/>
+                                    <rect x="5" y="5" width="14" height="14" rx="4" stroke="white" stroke-width="1.8"/>
+                                    <circle cx="17.5" cy="6.5" r="1" fill="white"/>
+                                    <defs>
+                                        <radialGradient id="ig_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(4 24) rotate(-64.5323) scale(27.4087)">
+                                            <stop stop-color="#FFDD55"/>
+                                            <stop offset="0.1" stop-color="#FFDD55"/>
+                                            <stop offset="0.5" stop-color="#FF543E"/>
+                                            <stop offset="1" stop-color="#C837AB"/>
+                                        </radialGradient>
+                                        <linearGradient id="ig_linear" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#405DE6" stop-opacity="0"/>
+                                            <stop offset="1" stop-color="#405DE6"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
                                 @matronitzatzadaki_psych
                             </a>
                         </div>
@@ -367,7 +404,7 @@
     </footer>
 
     <script>
-        // Initialize Lucide Icons (This ensures "instagram", "phone", etc. render correctly)
+        // Initialize Lucide Icons
         lucide.createIcons();
 
         // Navbar Scroll Effect
