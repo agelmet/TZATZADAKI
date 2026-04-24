@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="el" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Ματρώνη Τζατζαδάκη | Ψυχολόγος – Ψυχοδυναμική Ψυχοθεραπεύτρια</title>
+    <meta name="description" content="Η Ματρώνη Τζατζαδάκη είναι Ψυχολόγος, απόφοιτη του ΕΚΠΑ, και εκπαιδευόμενη θεραπεύτρια στην Ψυχοδυναμική / Ψυχαναλυτική Ψυχοθεραπεία.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        lux: {
+                            dark: '#0A0A0C',
+                            slate: '#12141A',
+                            surface: '#1A1C23',
+                            champagne: '#C8B6A6',
+                            taupe: '#9E928A',
+                            dust: '#4A4C54'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Cormorant Garamond', 'serif'],
+                        sans: ['Montserrat', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'glass': '0 8px 32px 0 rgba(0, 0, 0, 0.3)',
+                        'glow': '0 0 40px -10px rgba(200, 182, 166, 0.15)',
+                    },
+                    animation: {
+                        'float': 'float 12s ease-in-out infinite',
+                        'float-delayed': 'float 12s ease-in-out 6s infinite',
+                        'fade-in-up': 'fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0) scale(1)' },
+                            '50%': { transform: 'translateY(-20px) scale(1.05)' },
+                        },
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(40px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Modern Minimal Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0A0A0C; }
+        ::-webkit-scrollbar-thumb { background: #4A4C54; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #C8B6A6; }
+
+        /* General Utilities */
+        body { background-color: #0A0A0C; color: #EAEAEA; overflow-x: hidden; }
+        ::selection { background: #C8B6A6; color: #0A0A0C; }
+        
+        .text-balance { text-wrap: balance; }
+        .letter-spacing-widest { letter-spacing: 0.2em; }
+
+        /* Reveal Animations */
+        .reveal { opacity: 0; transform: translateY(40px); transition: all 1.2s cubic-bezier(0.25, 1, 0.5, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+
+        /* Glass & Cards */
+        .glass-nav { background: rgba(18, 20, 26, 0.7); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid rgba(200, 182, 166, 0.05); }
+        .glass-card { background: rgba(26, 28, 35, 0.4); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.03); transition: all 0.5s ease; }
+        .glass-card:hover { border-color: rgba(200, 182, 166, 0.2); transform: translateY(-5px); box-shadow: 0 10px 40px -10px rgba(0,0,0,0.5); }
+        
+        /* Drop Cap for Bio */
+        .drop-cap::first-letter { font-size: 3.5rem; float: left; margin-right: 0.15em; line-height: 0.8; font-family: 'Cormorant Garamond', serif; color: #C8B6A6; font-weight: 300; }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-lux-champagne selection:text-lux-dark">
+
+    <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
+        <div class="absolute top-[-10%] left-[-10%] w-[40vw] h-[40vw] rounded-full bg-lux-taupe/5 blur-[120px] animate-float"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[50vw] h-[50vw] rounded-full bg-lux-champagne/5 blur-[150px] animate-float-delayed"></div>
+    </div>
+
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 h-24 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-4 group">
+                <div class="w-14 h-14 rounded-full border border-lux-champagne/20 flex items-center justify-center bg-white/5 group-hover:bg-white/10 transition-colors p-1">
+                    <img src="https://github.com/agelmet/TZATZADAKI/blob/main/tzatzalogo.png?raw=true" alt="Ματρώνη Τζατζαδάκη Logo" class="w-full h-full object-contain rounded-full">
+                </div>
+                <div class="hidden sm:block">
+                    <h1 class="font-serif text-xl tracking-wide text-white group-hover:text-lux-champagne transition-colors">Ματρώνη Τζατζαδάκη</h1>
+                    <p class="text-[0.65rem] tracking-[0.15em] text-lux-taupe uppercase">Ψυχολογος - Ψυχοθεραπευτρια</p>
+                </div>
+            </a>
+            
+            <div class="hidden md:flex items-center space-x-10 text-sm tracking-wider font-light">
+                <a href="#about" class="text-gray-300 hover:text-lux-champagne transition-colors">ΒΙΟΓΡΑΦΙΚΟ</a>
+                <a href="#philosophy" class="text-gray-300 hover:text-lux-champagne transition-colors">ΠΡΟΣΕΓΓΙΣΗ</a>
+                <a href="#services" class="text-gray-300 hover:text-lux-champagne transition-colors">ΥΠΗΡΕΣΙΕΣ</a>
+                <a href="#contact" class="px-6 py-2.5 bg-transparent border border-lux-champagne/50 text-lux-champagne rounded-full hover:bg-lux-champagne hover:text-lux-dark transition-all duration-500">ΕΠΙΚΟΙΝΩΝΙΑ</a>
+            </div>
+
+            <button class="md:hidden text-lux-champagne focus:outline-none" id="mobile-menu-btn">
+                <i data-lucide="menu" class="w-8 h-8"></i>
+            </button>
+        </div>
+        
+        <div id="mobile-menu" class="absolute top-full left-0 w-full bg-lux-slate border-b border-white/5 hidden flex-col items-center py-8 space-y-6 shadow-2xl">
+            <a href="#about" class="text-sm tracking-widest text-gray-300 mobile-link">ΒΙΟΓΡΑΦΙΚΟ</a>
+            <a href="#philosophy" class="text-sm tracking-widest text-gray-300 mobile-link">ΠΡΟΣΕΓΓΙΣΗ</a>
+            <a href="#services" class="text-sm tracking-widest text-gray-300 mobile-link">ΥΠΗΡΕΣΙΕΣ</a>
+            <a href="#contact" class="text-sm tracking-widest text-lux-champagne mobile-link border border-lux-champagne/50 px-6 py-2 rounded-full">ΕΠΙΚΟΙΝΩΝΙΑ</a>
+        </div>
+    </nav>
+
+    <section class="relative min-h-screen flex items-center pt-24 px-6">
+        <div class="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-16 items-center">
+            
+            <div class="order-2 lg:order-1 reveal">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-12 h-[1px] bg-lux-champagne"></div>
+                    <span class="text-lux-champagne text-xs font-semibold tracking-[0.2em] uppercase">Ψυχαναλυτικη Ψυχοθεραπεια</span>
+                </div>
+                <h2 class="text-5xl lg:text-7xl font-serif text-white leading-tight mb-8 text-balance font-light">
+                    Μια βαθιά <span class="italic text-lux-champagne">συνάντηση</span> με τον εαυτό.
+                </h2>
+                <p class="text-lg text-gray-400 mb-12 max-w-lg font-light leading-relaxed">
+                    Ένας ασφαλής χώρος διερεύνησης και νοηματοδότησης της εμπειρίας, όπου το άτομο έρχεται σε επαφή με τις βαθύτερες πτυχές του.
+                </p>
+                <div class="flex flex-wrap items-center gap-6">
+                    <a href="#services" class="px-8 py-4 bg-lux-champagne text-lux-dark rounded-full text-sm font-semibold tracking-wider hover:bg-white transition-all duration-300 flex items-center gap-2 group">
+                        ΟΙ ΥΠΗΡΕΣΙΕΣ
+                        <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="order-1 lg:order-2 relative reveal delay-200">
+                <div class="relative w-full max-w-[500px] aspect-[4/5] mx-auto">
+                    <div class="absolute inset-0 border border-lux-champagne/30 rounded-t-full rounded-b-[4rem] transform translate-x-4 translate-y-4"></div>
+                    
+                    <div class="absolute inset-0 overflow-hidden rounded-t-full rounded-b-[4rem] bg-lux-surface relative z-10 p-2 shadow-2xl">
+                        <img src="https://github.com/agelmet/TZATZADAKI/blob/main/tzatza.png?raw=true" alt="Ματρώνη Τζατζαδάκη" class="w-full h-full object-cover rounded-t-full rounded-b-[3.5rem] filter contrast-125 brightness-90 grayscale-[20%] transition-transform duration-1000 hover:scale-105">
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2 opacity-50 animate-bounce">
+            <span class="text-[10px] tracking-widest uppercase text-lux-champagne">Scroll</span>
+            <div class="w-[1px] h-8 bg-lux-champagne"></div>
+        </div>
+    </section>
+
+    <div class="w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+
+    <section id="about" class="py-32 px-6 relative">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-20 reveal">
+                <h3 class="text-3xl md:text-5xl font-serif text-white mb-4">Ματρώνη Τζατζαδάκη</h3>
+                <p class="text-lux-taupe tracking-widest text-sm uppercase">Ψυχολογος – Ψυχοδυναμικη / Ψυχαναλυτικη Ψυχοθεραπευτρια</p>
+                <div class="w-16 h-[1px] bg-lux-champagne mx-auto mt-8"></div>
+            </div>
+
+            <div class="space-y-8 text-gray-300 font-light leading-relaxed text-lg reveal delay-100 drop-cap">
+                <p>
+                    Η Ματρώνη Τζατζαδάκη είναι Ψυχολόγος, απόφοιτη του Εθνικού και Καποδιστριακού Πανεπιστημίου Αθηνών (ΕΚΠΑ), και εκπαιδευόμενη θεραπεύτρια στην Ψυχοδυναμική / Ψυχαναλυτική Ψυχοθεραπεία. Παράλληλα, είναι πτυχιούχος Ελληνικής Φιλολογίας του ΕΚΠΑ με κατεύθυνση στη Γλωσσολογία, έχοντας εστιάσει το επιστημονικό της ενδιαφέρον στη Νευρογλωσσολογία και την Ψυχογλωσσολογία. 
+                </p>
+                <p>
+                    Στο πλαίσιο της ακαδημαϊκής της πορείας, πραγματοποίησε εξάμηνη φοίτηση στο Université de Genève (Faculté des Lettres, Département de Linguistique), εμβαθύνοντας στη Γαλλική Φωνητική και τη Γλωσσολογία. Η διεπιστημονική της εκπαίδευση ενισχύει μια ολιστική κατανόηση της ψυχικής λειτουργίας, συνδέοντας τη γλώσσα, τη σκέψη και το συναίσθημα.
+                </p>
+                <p>
+                    Διατηρεί ενεργή παρουσία στην επιστημονική κοινότητα, συμμετέχοντας σε συνέδρια και επιστημονικές εκδηλώσεις, ενώ έχει παρουσιάσει ερευνητικές εργασίες σε πανελλήνια συνέδρια ψυχολογικής έρευνας, με θεματικές που περιλαμβάνουν το πένθος, την ψυχική επεξεργασία υπό συνθήκες κρίσης, καθώς και τη βιωματική εμπειρία των θεραπευτών στη μετάβαση στον ρόλο του θεραπευόμενου. Παράλληλα, ασχολείται με τη συγγραφή και επιμέλεια άρθρων ψυχολογικού περιεχομένου, αξιοποιώντας τη φιλολογική της κατάρτιση.
+                </p>
+                <div class="grid md:grid-cols-2 gap-8 my-12">
+                    <div class="glass-card p-8 rounded-2xl">
+                        <i data-lucide="briefcase" class="w-8 h-8 text-lux-champagne mb-4"></i>
+                        <p class="text-base">Επαγγελματικά, εργάζεται ως Ψυχολόγος και Ψυχοθεραπεύτρια, παρέχοντας ατομικές συνεδρίες σε ενήλικες, τόσο ιδιωτικά όσο και σε συνεργασία με δομές ψυχικής υγείας. Έχει εμπειρία από τη δουλειά της σε πλαίσια ειδικής αγωγής και από τη συμμετοχή της σε θεραπευτικές ομάδες σε ιδρύματα και σχολικά περιβάλλοντα.</p>
+                    </div>
+                    <div class="glass-card p-8 rounded-2xl">
+                        <i data-lucide="heart-handshake" class="w-8 h-8 text-lux-champagne mb-4"></i>
+                        <p class="text-base">Έχει συνεργαστεί με τον οργανισμό Pet Partners of Hellas, συμβάλλοντας σε παρεμβάσεις που αξιοποιούν τη θεραπευτική σχέση ανθρώπου–ζώου. Είναι επιστημονική συνεργάτις της Aerton, συμμετέχοντας ενεργά σε δράσεις που στοχεύουν στην προαγωγή της ψυχικής υγείας.</p>
+                    </div>
+                </div>
+                <p>
+                    Στην κλινική της πρακτική, ακολουθεί την ψυχοδυναμική/ψυχαναλυτική προσέγγιση, δίνοντας έμφαση στην κατανόηση των ασυνείδητων διεργασιών, των πρώιμων σχέσεων και της προσωπικής ιστορίας του ατόμου. Η θεραπευτική διαδικασία αντιμετωπίζεται ως ένας χώρος διερεύνησης και νοηματοδότησης της εμπειρίας, όπου το άτομο μπορεί να έρθει σε επαφή με βαθύτερες πτυχές του εαυτού του.
+                </p>
+                <p>
+                    Ασχολείται με ζητήματα όπως οι αγχώδεις διαταραχές, η κατάθλιψη, το πένθος, οι κρίσεις πανικού, οι φοβίες, τα θέματα αυτοεκτίμησης, οι διαταραχές διάθεσης και οι δυσκολίες στις διαπροσωπικές σχέσεις.
+                </p>
+                <div class="border-l-2 border-lux-champagne pl-6 py-2 mt-8 text-white/90 italic font-serif text-2xl">
+                    "Η θεραπευτική της στάση βασίζεται στη δημιουργία ενός ασφαλούς και εμπιστευτικού πλαισίου, με σεβασμό στη μοναδικότητα κάθε ανθρώπου και στόχο τη βαθύτερη κατανόηση, την ψυχική επεξεργασία και την ουσιαστική αλλαγή."
+                </div>
+                <p class="mt-8">
+                    Διατηρεί ιδιωτικό γραφείο στον Βύρωνα, καθώς και στο κέντρο της Αθήνας, όπου πραγματοποιεί συνεδρίες δια ζώσης, ενώ υπάρχει και η δυνατότητα online συνεδριών.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+
+    <section id="philosophy" class="py-32 px-6 bg-lux-slate relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNDOEI2QTYiIGZpbGwtb3BhY2l0eT0iMSI+PHBhdGggZD0iTTM2IDM0djI2aC0ydy0yNkgxMHYySDh2LTJoLTJWMzRoMnoiLz48L2c+PC9nPjwvc3ZnPg==')]"></div>
+        
+        <div class="max-w-6xl mx-auto relative z-10">
+            <div class="grid lg:grid-cols-12 gap-16">
+                
+                <div class="lg:col-span-5 reveal">
+                    <h2 class="text-4xl md:text-5xl font-serif text-white mb-8 leading-tight">Γιατί να επιλέξω Ψυχαναλυτική / Ψυχοδυναμική Ψυχοθεραπεία;</h2>
+                    <div class="w-20 h-[1px] bg-lux-champagne mb-8"></div>
+                    <p class="text-xl font-serif italic text-lux-champagne mb-6">"Υπάρχουν στιγμές που κάτι μέσα μας «μιλά», χωρίς να βρίσκει εύκολα λέξεις."</p>
+                    <p class="text-gray-400 font-light">Ένα βάρος, μια ανησυχία, μια επανάληψη που κουράζει. Σαν να επιστρέφουμε ξανά και ξανά στα ίδια σημεία, χωρίς να καταλαβαίνουμε γιατί.</p>
+                </div>
+
+                <div class="lg:col-span-7 space-y-6 text-gray-300 font-light leading-relaxed reveal delay-200">
+                    <p>
+                        Η ψυχαναλυτική/ψυχοδυναμική ψυχοθεραπεία είναι ένας χώρος όπου αυτά τα άρρητα μπορούν σιγά-σιγά να ειπωθούν. Δεν εστιάζει μόνο σε αυτό που φαίνεται, αλλά σε αυτό που κινείται πιο βαθιά στις εμπειρίες, στα συναισθήματα και στις εσωτερικές μας διεργασίες που, συχνά αθόρυβα, επηρεάζουν τον τρόπο που ζούμε και σχετιζόμαστε.
+                    </p>
+                    <p>
+                        Η προσέγγιση αυτή έχει τις ρίζες της στο έργο του Sigmund Freud, ο οποίος πρώτος ανέδειξε τη σημασία του ασυνείδητου και της πρώιμης εμπειρίας. Με το πέρασμα του χρόνου, η ψυχαναλυτική σκέψη εξελίχθηκε και εμπλουτίστηκε μέσα από θεωρητικούς όπως η Melanie Klein, ο Donald Winnicott και ο Wilfred Bion, που έδωσαν έμφαση στη σημασία των πρώιμων σχέσεων και της συναισθηματικής εμπειρίας.
+                    </p>
+                    <p>
+                        Σήμερα, η ψυχοδυναμική ψυχοθεραπεία αποτελεί μια σύγχρονη εξέλιξη αυτής της παράδοσης, πιο ευέλικτη και προσαρμοσμένη στις ανάγκες του σύγχρονου ανθρώπου, με επίκεντρο τη θεραπευτική σχέση και την εμπειρία του «εδώ και τώρα».
+                    </p>
+                    
+                    <div class="p-8 mt-8 border border-lux-champagne/20 rounded-2xl bg-white/5 relative overflow-hidden group">
+                        <div class="absolute inset-0 bg-lux-champagne/5 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-1000 ease-in-out"></div>
+                        <p class="relative z-10 text-white/90">
+                            Η θεραπεία μοιάζει με ένα ήρεμο, σταθερό ταξίδι προς τα μέσα. Εκεί όπου αρχίζουμε να ακούμε πιο καθαρά τον εαυτό μας. Να αναγνωρίζουμε κομμάτια που ίσως είχαμε αφήσει στο περιθώριο. Να δίνουμε νόημα σε όσα μέχρι τώρα έμοιαζαν μπερδεμένα ή χωρίς εξήγηση.
+                            <br><br>
+                            Μέσα στη θεραπευτική σχέση δημιουργείται ένας ασφαλής χώρος, ένας τόπος χωρίς βιασύνη και χωρίς κριτική. Εκεί, ο χρόνος επιτρέπει στα πράγματα να ξεδιπλωθούν με τον δικό τους ρυθμό. Και πολλές φορές, μέσα από αυτή τη διαδικασία, κάτι αλλάζει ήσυχα αλλά ουσιαστικά: ο τρόπος που σχετιζόμαστε, που νιώθουμε, που υπάρχουμε.
+                        </p>
+                    </div>
+                    
+                    <p class="text-xl font-serif text-white pt-6">
+                        Δεν είναι μια γρήγορη λύση. Είναι όμως μια βαθιά συνάντηση με τον εαυτό. <br>
+                        <span class="text-lux-champagne italic">Και ίσως, τελικά, μια ευκαιρία να ζήσουμε με περισσότερη κατανόηση, ελευθερία και αλήθεια.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-32 px-6 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-24 reveal">
+                <span class="text-lux-taupe tracking-[0.2em] text-sm uppercase">Υπηρεσιες</span>
+                <h2 class="text-4xl md:text-5xl font-serif text-white mt-4 mb-6">Θεραπευτικά Πλαίσια</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <div class="glass-card rounded-[2rem] p-10 flex flex-col h-full reveal">
+                    <div class="w-14 h-14 bg-lux-champagne/10 border border-lux-champagne/30 rounded-2xl flex items-center justify-center mb-8">
+                        <i data-lucide="user" class="w-6 h-6 text-lux-champagne"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif text-white mb-6">Ατομικές συνεδρίες <br><span class="text-lg text-lux-taupe font-sans font-light">δια ζώσης και διαδικτυακές</span></h3>
+                    <div class="space-y-4 text-gray-400 font-light text-sm flex-grow">
+                        <p>Η ατομική ψυχοθεραπεία αποτελεί έναν αυστηρά προσωπικό και προστατευμένο χώρο, όπου ο θεραπευόμενος μπορεί να εκφράσει ελεύθερα τις σκέψεις, τα συναισθήματα και τις βαθύτερες ανησυχίες του. Μέσα από την ψυχαναλυτική/ψυχοδυναμική προσέγγιση, διερευνούμε μαζί τις ασυνείδητες διεργασίες και τα μοτίβα που συχνά επηρεάζουν αθόρυβα την καθημερινότητά σας.</p>
+                        <p>Είτε επιλέξετε τις δια ζώσης συνεδρίες στα γραφεία μας (στον Βύρωνα ή στο Κέντρο της Αθήνας), είτε τις διαδικτυακές συναντήσεις από την άνεση του δικού σας χώρου, η ποιότητα, η εμπιστευτικότητα και η σταθερότητα του θεραπευτικού πλαισίου παραμένουν απόλυτα αναλλοίωτες.</p>
+                        <p>Ο πρωταρχικός στόχος είναι η δημιουργία μιας ισχυρής θεραπευτικής συμμαχίας, η οποία θα αποτελέσει το όχημα για την εσωτερική αναζήτηση, την κατανόηση των συμπτωμάτων και, τελικά, την ψυχική ανακούφιση και εξέλιξη.</p>
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-[2rem] p-10 flex flex-col h-full reveal delay-100">
+                    <div class="w-14 h-14 bg-lux-champagne/10 border border-lux-champagne/30 rounded-2xl flex items-center justify-center mb-8">
+                        <i data-lucide="users" class="w-6 h-6 text-lux-champagne"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif text-white mb-6">Έφηβοι - Ενήλικες</h3>
+                    <div class="space-y-4 text-gray-400 font-light text-sm flex-grow">
+                        <p>Η εφηβεία συνιστά μια περίοδο ραγδαίων αλλαγών, κρίσης ταυτότητας και έντονων συναισθηματικών μεταπτώσεων. Η ψυχοθεραπευτική παρέμβαση σε αυτή τη νευραλγική φάση προσφέρει ένα ασφαλές, μη επικριτικό πλαίσιο, βοηθώντας τον έφηβο να νοηματοδοτήσει τις εσωτερικές του συγκρούσεις και να διαχειριστεί ομαλά τη μετάβαση προς την ενηλικίωση.</p>
+                        <p>Για τους ενήλικες, η θεραπεία εστιάζει στη διαχείριση των πολύπλοκων προκλήσεων της σύγχρονης ζωής, από τις επαγγελματικές πιέσεις και το εργασιακό άγχος, έως τις διαπροσωπικές σχέσεις και τα βαθύτερα υπαρξιακά ερωτήματα.</p>
+                        <p>Προσεγγίζουμε τα εκάστοτε συμπτώματα (όπως άγχος, καταθλιπτική διάθεση, φοβίες, κρίσεις πανικού) όχι απλώς ως εμπόδια που πρέπει άμεσα να «διαγραφούν», αλλά ως πολύτιμα μηνύματα του ψυχισμού που ζητούν ακρόαση, χώρο και αποκωδικοποίηση.</p>
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-[2rem] p-10 flex flex-col h-full reveal delay-200">
+                    <div class="w-14 h-14 bg-lux-champagne/10 border border-lux-champagne/30 rounded-2xl flex items-center justify-center mb-8">
+                        <i data-lucide="network" class="w-6 h-6 text-lux-champagne"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif text-white mb-6">Θεραπεία Ζεύγους</h3>
+                    <div class="space-y-4 text-gray-400 font-light text-sm flex-grow">
+                        <p>Στη θεραπεία ζεύγους, στο επίκεντρο της φροντίδας βρίσκεται η ίδια η σχέση. Πολύ συχνά, οι σύντροφοι εγκλωβίζονται σε επαναλαμβανόμενους κύκλους συγκρούσεων και παρεξηγήσεων, βιώνοντας αισθήματα αποξένωσης, ματαίωσης και θυμού, αδυνατώντας να κατανοήσουν τι πραγματικά συμβαίνει κάτω από την επιφάνεια.</p>
+                        <p>Μέσα από το πρίσμα της ψυχοδυναμικής κατανόησης, αναζητούμε από κοινού τα ασυνείδητα «συμβόλαια», τις ανεκπλήρωτες ανάγκες και τις πρώιμες προβολές που το κάθε μέλος φέρνει άθελά του μέσα στη δυναμική της σχέσης.</p>
+                        <p>Δουλεύουμε με σεβασμό και προς τους δύο, προκειμένου να αποκαταστήσουμε τα κανάλια επικοινωνίας, να ενισχύσουμε την αμοιβαία ενσυναίσθηση και να δημιουργήσουμε νέους, πιο υγιείς και συνειδητούς τρόπους συναισθηματικής σύνδεσης.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-lux-slate pt-24 pb-12 relative border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 mb-20 items-center">
+                
+                <div class="reveal">
+                    <h2 class="text-4xl font-serif text-white mb-6">Επικοινωνία</h2>
+                    <p class="text-gray-400 font-light max-w-md mb-8">
+                        Το πρώτο βήμα προς τη θεραπεία ξεκινά με την επικοινωνία. 
+                        Η εξυπηρέτηση γίνεται κατόπιν ραντεβού στα γραφεία μας στον Βύρωνα και στο κέντρο της Αθήνας.
+                    </p>
+                </div>
+
+                <div class="grid sm:grid-cols-2 gap-8 reveal delay-100">
+                    <div class="space-y-6">
+                        <div>
+                            <span class="block text-lux-taupe text-xs tracking-widest uppercase mb-2">Τηλεφωνο / WhatsApp</span>
+                            <a href="tel:+306908535380" class="text-lg text-white hover:text-lux-champagne transition-colors flex items-center gap-2">
+                                <i data-lucide="phone" class="w-4 h-4 text-lux-champagne"></i>
+                                6908535380
+                            </a>
+                        </div>
+                        <div>
+                            <span class="block text-lux-taupe text-xs tracking-widest uppercase mb-2">Ηλεκτρονικο Ταχυδρομειο</span>
+                            <a href="mailto:mtzatzadaki.psych@gmail.com" class="text-base text-white hover:text-lux-champagne transition-colors flex items-center gap-2 break-all">
+                                <i data-lucide="mail" class="w-4 h-4 text-lux-champagne shrink-0"></i>
+                                mtzatzadaki.psych@gmail.com
+                            </a>
+                        </div>
+                    </div>
+                    <div class="space-y-6">
+                        <div>
+                            <span class="block text-lux-taupe text-xs tracking-widest uppercase mb-2">Κοινωνικα Δικτυα</span>
+                            <a href="https://instagram.com/matronitzatzadaki_psych" target="_blank" class="text-base text-white hover:text-lux-champagne transition-colors flex items-center gap-2">
+                                <i data-lucide="instagram" class="w-4 h-4 text-lux-champagne"></i>
+                                @matronitzatzadaki_psych
+                            </a>
+                        </div>
+                        <div>
+                            <span class="block text-lux-taupe text-xs tracking-widest uppercase mb-2">Τοποθεσια</span>
+                            <p class="text-base text-white flex items-start gap-2">
+                                <i data-lucide="map-pin" class="w-4 h-4 text-lux-champagne mt-1 shrink-0"></i>
+                                Βύρωνας & Κέντρο Αθήνας<br>(Κατόπιν Ραντεβού)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-light text-gray-500 reveal delay-200">
+                <p>&copy; 2026 Ματρώνη Τζατζαδάκη. Με την επιφύλαξη παντός δικαιώματος.</p>
+                <div class="flex items-center gap-4">
+                    <span>Ψυχολόγος</span>
+                    <span class="w-1 h-1 rounded-full bg-lux-champagne"></span>
+                    <span>Ψυχοδυναμική Ψυχοθεραπεύτρια</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('h-20', 'bg-[#12141a]/90');
+                navbar.classList.remove('h-24', 'bg-[#12141a]/70');
+            } else {
+                navbar.classList.add('h-24', 'bg-[#12141a]/70');
+                navbar.classList.remove('h-20', 'bg-[#12141a]/90');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+            });
+        });
+
+        // Scroll Reveal Animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target); 
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
